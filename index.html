@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ModHop – Download</title>
+<meta name="description" content="Move your Minecraft mods to any version or launcher. Free for Windows.">
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0b0f17; --panel: #131a26; --line: #222b3b; --text: #e8edf6; --muted: #8d98ad; --green: #5bbf3a; --green-dark: #3f8f27; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, "Segoe UI", sans-serif; display: grid; place-items: center; padding: 32px 16px; }
+  main { width: min(560px, 100%); text-align: center; }
+  .logo { width: 112px; height: 112px; margin: 0 auto 18px; }
+  .logo svg { width: 100%; height: 100%; display: block; }
+  h1 { font-family: "Silkscreen", monospace; font-weight: 400; font-size: 40px; letter-spacing: 1px; margin: 0; }
+  .sub { color: var(--muted); margin: 6px 0 28px; font-size: 17px; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 30px; border-radius: 14px; background: var(--green); color: #08160a; font-weight: 700; font-size: 18px; text-decoration: none; box-shadow: 0 5px 0 var(--green-dark); transition: transform .1s, box-shadow .1s; }
+  .btn:hover { filter: brightness(1.06); }
+  .btn:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--green-dark); }
+  .meta { color: var(--muted); font-size: 13px; margin-top: 14px; }
+  .steps { text-align: start; margin: 34px 0 0; padding: 18px 20px; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); }
+  .steps b { display: block; margin-bottom: 8px; }
+  .steps ol { margin: 0; padding-inline-start: 20px; color: var(--muted); }
+  .steps li { margin: 4px 0; }
+  .steps li span { color: var(--text); }
+  footer { margin-top: 26px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); }
+  #started { display: none; color: var(--green); font-size: 14px; margin-top: 12px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><defs><g id="g"><path d="M76 128l40 20-40 20-40-20z" fill="#6CC24A"/><path d="M70 140l6 3-6 3-6-3zM90 150l6 3-6 3-6-3zM62 152l5 2.5-5 2.5-5-2.5z" fill="#57A83A"/><path d="M36 148l40 20v46l-40-20z" fill="#8B5A2B"/><path d="M116 148l-40 20v46l40-20z" fill="#6B4423"/><path d="M50 186l7 3.5v7l-7-3.5zM64 200l7 3.5v7l-7-3.5z" fill="#6B4423"/><path d="M100 186l-7 3.5v7l7-3.5zM90 200l-7 3.5v7l7-3.5z" fill="#4F3219"/><path d="M36 148l40 20v12l-40-20z" fill="#5DAA3C"/><path d="M116 148l-40 20v12l40-20z" fill="#4E9433"/><path d="M44 164l6 3v8l-6-3zM62 173l6 3v6l-6-3z" fill="#5DAA3C"/><path d="M104 166l-6 3v8l6-3zM88 174l-6 3v6l6-3z" fill="#4E9433"/></g></defs><rect x="8" y="8" width="240" height="240" rx="56" fill="#4FA3E0"/><rect x="20" y="214" width="216" height="22" rx="11" fill="#3B8BC9"/><use href="#g" opacity=".55"/><use href="#g" transform="translate(104 0)"/><path d="M76 118C80 52 166 36 180 96" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round"/><path d="M160 94L181 124 202 92Z" fill="#fff" stroke="#fff" stroke-width="10" stroke-linejoin="round"/></svg></div>
+  <h1>ModHop</h1>
+  <p class="sub">Move your Minecraft mods to any version or launcher</p>
+  <a class="btn" id="dl" href="https://github.com/springames147-art/ModHop/releases/latest/download/Install-ModHop.cmd">⬇ Download for Windows</a>
+  <div class="meta">Free · Windows 10 and 11 · Updates itself</div>
+  <div id="started">Your download has started.</div>
+  <div class="steps">
+    <b>How to install</b>
+    <ol>
+      <li><span>Open the downloaded file</span> (Install-ModHop.cmd) from your browser's downloads.</li>
+      <li>If your browser or Windows warns about it, choose <span>Keep</span> or <span>More info → Run anyway</span>.</li>
+      <li>Click <span>Install</span>. ModHop opens and adds an icon to your desktop.</li>
+    </ol>
+  </div>
+  <footer>Works with Dawn, Modrinth App, Prism Launcher, MultiMC, the Minecraft Launcher and more.</footer>
+</main>
+<script>
+  // Start the download once when the page opens (the button is there if it doesn't).
+  const dl = document.getElementById('dl');
+  setTimeout(() => { location.href = dl.href; document.getElementById('started').style.display = 'block'; }, 700);
+</script>
+</body>
+</html>
